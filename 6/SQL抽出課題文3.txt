@@ -1,0 +1,23 @@
+SELECT * FROM gs_users WHERE id=1 OR id=3 OR id=5;
+SELECT * FROM gs_users WHERE id>=4 AND id<=8;
+SELECT * FROM gs_users WHERE email LIKE '%test1%';
+SELECT * FROM gs_users ORDER BY indate DESC;
+SELECT * FROM gs_users WHERE age=20 AND indate='2016-05-26%';
+SELECT * FROM gs_users ORDER BY indate DESC LIMIT 5;
+SELECT CASE WHEN age >= 10 AND age <=19 THEN 10
+            WHEN age >= 20 AND age <=29 THEN 20 
+            WHEN age >= 30 AND age <=39 THEN 30 
+            WHEN age >= 40 AND age <=49 THEN 40 
+end AS "age_group" 
+COUNT(
+        CASE
+        WHEN age >= 10 AND age <=19 THEN 10 
+        WHEN age >= 20 AND age <=29 THEN 20 
+        WHEN age >= 30 AND age <=39 THEN 30 
+        WHEN age >= 40 AND age <=49 THEN 40 
+end
+            )AS "age_count" 
+FROM gs_users 
+GROUP BY "age_group" 
+ORDER BY "age_group";
+結局うまく動きませんでしたが、原因を突き止めることができませんでした。
