@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- <script src="js/jquery-2.1.3.min.js"></script> -->
+  <title>clinical trial search home</title>
+  <!-- <link href="css/bootstrap.min.css" rel="stylesheet">
+  <style>div{padding: 10px;font-size:16px;}</style> -->
+  <!--Bootstrap４に必要なCSSとJavaScriptを読み込み-->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+  <script src="https://code.jquery.com/jquery-2.2.3.js"></script>
+  <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+</head>
+<body>
+
+
+  <!--タブコンポーネントを使ってHTMLコーディング-->
+  <div class="m-t-1 m-l-1 m-r-1">
+    <!--タブのボタン部分-->
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a href="#tab1" class="nav-link bg-primary" data-toggle="tab">タブ1</a>
+      </li>
+      <li class="nav-item">
+        <a href="#tab2" class="nav-link bg-primary" data-toggle="tab">タブ2</a>
+      </li>
+      <li class="nav-item">
+        <a href="#tab3" class="nav-link bg-primary" data-toggle="tab">タブ3</a>
+      </li>
+      <li class="nav-item">
+        <a href="#tab4" class="nav-link bg-primary" data-toggle="tab">タブ4</a>
+      </li>
+    </ul>
+    <!--タブのコンテンツ部分-->
+    <div class="tab-content">
+      <div id="tab1" class="tab-pane active">
+        <img src="http://jsrun.it/assets/8/I/s/O/8IsOW.jpg" alt="" class="img-fluid">
+      </div>
+      <div id="tab2" class="tab-pane">
+        <img src="http://jsrun.it/assets/6/6/k/e/66keT.jpg" alt="" class="img-fluid">
+      </div>
+      <div id="tab3" class="tab-pane">
+        <img src="http://jsrun.it/assets/6/3/h/f/63hfC.jpg" alt="" class="img-fluid">
+      </div>
+      <div id="tab4" class="tab-pane">
+        <img src="http://jsrun.it/assets/y/e/t/o/yeto8.jpg" alt="" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</body>
+
+
+
+
+
+
+<!-- Head[End] -->
+
+<!-- Main[Start] -->
+<form method="post" action="insert.php">
+
+
+   <fieldset>
+
+     <label><p>試験番号：<input type="text" name="JapicCTI_No"></p></label><br>
+     <label><p>試験名称：<input type="text" name="shikenNoMeisho"></p></label><br>
+     <label><p>試験目的：</p><textArea name="shikenNoMokuteki" rows="4" cols="40"></textArea></label><br>
+     <input type="submit" class="btn btn-success btn-lg" value="入力">
+
+
+</form>
+<!-- Main[End] -->
+
+
+</body>
+</html>
